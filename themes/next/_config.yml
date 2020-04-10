@@ -95,7 +95,7 @@ menu:
   home: /||home
   #about: /about/||user
   #tags: /tags/||tags
-  categories: /categories/||th
+  #categories: /categories/||th
   archives: /archives/||archive
   #schedule: /schedule/||calendar
   #sitemap: /sitemap.xml||sitemap
@@ -402,15 +402,15 @@ valine:
 # You can get your Github ID from https://api.github.com/users/<Github username>
 gitment:
   enable: true
-  mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
+  mint: false # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
-  cleanly: false # Hide 'Powered by ...' on footer, and more
+  cleanly: true # Hide 'Powered by ...' on footer, and more
   language: # Force language, or auto switch by theme
-  github_user: ZhangHuan95 # MUST HAVE, Your Github ID
-  github_repo: ZhangHuan95.github.io # MUST HAVE, The repo you use to store Gitment comments
-  client_id: f701076f21eecfd4d18c # MUST HAVE, Github client id for the Gitment
-  client_secret: 43af158978797092ef65325f653e022925f7acfb # EITHER this or proxy_gateway, Github access secret token for the Gitment
+  github_user: 'ZhangHuan95' # MUST HAVE, Your Github ID
+  github_repo: 'ZhangHuan95.github.io' # MUST HAVE, The repo you use to store Gitment comments
+  client_id: 'f701076f21eecfd4d18c' # MUST HAVE, Github client id for the Gitment
+  client_secret: '43af158978797092ef65325f653e022925f7acfb' # EITHER this or proxy_gateway, Github access secret token for the Gitment
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
