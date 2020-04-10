@@ -1,5 +1,6 @@
 ---
 typora-root-url: ..
+comments: true
 ---
 
 # LPR(Vehicle License Plate Recognition)
