@@ -275,6 +275,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/09/OpenBCI/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/09/OpenBCI/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -408,6 +418,16 @@ OpenBCI是个面向脑机接口EEG信号采集的开源硬件。OpenBCI Cyton是
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/09/LPR/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/09/LPR/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -772,6 +792,28 @@ opencv下载链接点这里
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'CKDrhyGwcNoHvvE8DG1YG47G-gzGzoHsz',
+        appKey: '7pQFeSbNWjb9zxUsXy9esLTQ',
+        placeholder: '哔哩哔哩 (゜-゜)つロ 干杯~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
