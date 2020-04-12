@@ -3,6 +3,7 @@ title: OpenBCI
 typora-root-url: ..
 date: 2020-04-09 22:59:58
 tags: OpenBCI
+comments: true
 ---
 # 基于头部信号的小车运动控制实现 
 ## 前言
