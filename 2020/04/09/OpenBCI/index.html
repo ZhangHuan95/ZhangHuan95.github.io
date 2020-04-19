@@ -98,10 +98,17 @@
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/figure1.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/Snipaste_2020-04-12_18-33-49.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/Snipaste_2020-04-12_18-33-56.png">
+<meta property="og:image" content="http://yoursite.com/images/OpenBCI/figure2.png">
+<meta property="og:image" content="http://yoursite.com/images/OpenBCI/Snipaste_2020-04-19_20-14-31.png">
+<meta property="og:image" content="http://yoursite.com/images/OpenBCI/programming.png">
+<meta property="og:image" content="http://yoursite.com/images/OpenBCI/testingCmd1.png">
+<meta property="og:image" content="http://yoursite.com/images/OpenBCI/testingCmd2.png">
+<meta property="og:image" content="http://yoursite.com/images/OpenBCI/sysRunning.png">
+<meta property="og:image" content="http://yoursite.com/images/OpenBCI/output.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/Snipaste_2020-04-12_18-39-27.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/Snipaste_2020-04-12_18-39-36.png">
 <meta property="article:published_time" content="2020-04-09T14:59:58.000Z">
-<meta property="article:modified_time" content="2020-04-12T11:17:41.649Z">
+<meta property="article:modified_time" content="2020-04-19T12:30:22.011Z">
 <meta property="article:author" content="张欢">
 <meta property="article:tag" content="OpenBCI">
 <meta name="twitter:card" content="summary">
@@ -460,9 +467,31 @@
 <p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-33-56.png" alt=""></p>
 </li>
 </ol>
-<h3 id="三、测试"><a href="#三、测试" class="headerlink" title="三、测试"></a>三、测试</h3><h4 id="（一）机器小车测试"><a href="#（一）机器小车测试" class="headerlink" title="（一）机器小车测试"></a>（一）机器小车测试</h4><p>待续<del>~</del></p>
-<h4 id="（二）信号处理系统测试"><a href="#（二）信号处理系统测试" class="headerlink" title="（二）信号处理系统测试"></a>（二）信号处理系统测试</h4><p>待续<del>~</del></p>
-<h4 id="（三）系统集成测试"><a href="#（三）系统集成测试" class="headerlink" title="（三）系统集成测试"></a>（三）系统集成测试</h4><p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-39-27.png" alt=""></p>
+<h3 id="三、测试"><a href="#三、测试" class="headerlink" title="三、测试"></a>三、测试</h3><h4 id="（一）OpenBCI眼电验证"><a href="#（一）OpenBCI眼电验证" class="headerlink" title="（一）OpenBCI眼电验证"></a>（一）OpenBCI眼电验证</h4><ol>
+<li><p>设置过滤噪声开关-Notch（与交流电相关，大陆地区为50 Hz）</p>
+</li>
+<li><p>设置合适的标尺-VertScale（正常设置为200~1000，具体根据实际测量数据大小自由调整）</p>
+</li>
+<li><p>关闭不使用的通道（防止影响使用中的通道的数据观察）</p>
+</li>
+<li><p>保持皮肤干爽（建议粘贴脑电极前使用洁面膏等清洗脸部，并擦干保持干燥）</p>
+</li>
+<li><p>使用黏性较强的胶带粘贴，如下图所示</p>
+<p><img src="/images/OpenBCI/figure2.png" alt=""></p>
+</li>
+<li><p>通过对比(a)(b)(c)(d)可知，带通滤波器的选择在7-13Hz时，波形最为容易分析，所以在信号处理系统设计中，带通滤波器的频带剪切频率f1选择为7Hz和剪切频率f2选择为13Hz。</p>
+<p><img src="/images/OpenBCI/Snipaste_2020-04-19_20-14-31.png" alt=""></p>
+</li>
+</ol>
+<h4 id="（二）机器小车测试"><a href="#（二）机器小车测试" class="headerlink" title="（二）机器小车测试"></a>（二）机器小车测试</h4><p>将小车运行测试代码烧写入小车中如下图所示，</p>
+<p><img src="/images/OpenBCI/programming.png" alt=""></p>
+<p>当小车从串口接收到第一个左转指令时，将其视为启动命令，控制小车前进，其后不断从串口缓冲区读取命令，当读取到字符l时控制小车左转，并输出left，当读取到字符r时控制小车右转，并输出right。测试结果如下图所示。</p>
+<p><img src="/images/OpenBCI/testingCmd1.png" alt=""></p>
+<p><img src="/images/OpenBCI/testingCmd2.png" alt=""></p>
+<h4 id="（三）信号处理系统测试"><a href="#（三）信号处理系统测试" class="headerlink" title="（三）信号处理系统测试"></a>（三）信号处理系统测试</h4><p><img src="/images/OpenBCI/sysRunning.png" alt=""></p>
+<p>信号处理系统运行如上图所示，首先各设备之间建立连接，然后读取EEG数据，先对其进行信号预处理，再进行信号识别。测试结果如下图所示，设备连接正常，数据传输正常，信号处理系统运行正常。</p>
+<p><img src="/images/OpenBCI/output.png" alt=""></p>
+<h4 id="（四）系统集成测试"><a href="#（四）系统集成测试" class="headerlink" title="（四）系统集成测试"></a>（四）系统集成测试</h4><p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-39-27.png" alt=""></p>
 <p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-39-36.png" alt=""></p>
 <h3 id="四、建议及总结"><a href="#四、建议及总结" class="headerlink" title="四、建议及总结"></a>四、建议及总结</h3><ol>
 <li><h4 id="改进方法，减少系统误差，减少控制时延。"><a href="#改进方法，减少系统误差，减少控制时延。" class="headerlink" title="改进方法，减少系统误差，减少控制时延。"></a>改进方法，减少系统误差，减少控制时延。</h4></li>
@@ -646,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于头部信号的小车运动控制实现"><span class="nav-number">1.</span> <span class="nav-text">基于头部信号的小车运动控制实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#废话不多说先看效果"><span class="nav-number">1.2.</span> <span class="nav-text">废话不多说先看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">1.3.</span> <span class="nav-text">前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.3.1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">1.3.2.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、理论知识"><span class="nav-number">1.3.3.</span> <span class="nav-text">一、理论知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、研究方法与思路"><span class="nav-number">1.3.4.</span> <span class="nav-text">二、研究方法与思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-系统设计"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">(一)系统设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-机器小车"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">(二)机器小车</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-信号预处理"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">(三)信号预处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-信号识别"><span class="nav-number">1.3.4.4.</span> <span class="nav-text">(四)信号识别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、测试"><span class="nav-number">1.3.5.</span> <span class="nav-text">三、测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（一）机器小车测试"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">（一）机器小车测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（二）信号处理系统测试"><span class="nav-number">1.3.5.2.</span> <span class="nav-text">（二）信号处理系统测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（三）系统集成测试"><span class="nav-number">1.3.5.3.</span> <span class="nav-text">（三）系统集成测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、建议及总结"><span class="nav-number">1.3.6.</span> <span class="nav-text">四、建议及总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#改进方法，减少系统误差，减少控制时延。"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">改进方法，减少系统误差，减少控制时延。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开源硬件成本低廉，开发方便。"><span class="nav-number">1.3.6.2.</span> <span class="nav-text">开源硬件成本低廉，开发方便。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#该系统适用性强，经过适当改造可以控制其他设备。"><span class="nav-number">1.3.6.3.</span> <span class="nav-text">该系统适用性强，经过适当改造可以控制其他设备。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对于特定人群例如残疾人、聋哑人的应用前景更为广阔。"><span class="nav-number">1.3.6.4.</span> <span class="nav-text">对于特定人群例如残疾人、聋哑人的应用前景更为广阔。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续！不定期炸更。"><span class="nav-number">1.4.</span> <span class="nav-text">未完待续！不定期炸更。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于头部信号的小车运动控制实现"><span class="nav-number">1.</span> <span class="nav-text">基于头部信号的小车运动控制实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#废话不多说先看效果"><span class="nav-number">1.2.</span> <span class="nav-text">废话不多说先看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">1.3.</span> <span class="nav-text">前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.3.1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">1.3.2.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、理论知识"><span class="nav-number">1.3.3.</span> <span class="nav-text">一、理论知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、研究方法与思路"><span class="nav-number">1.3.4.</span> <span class="nav-text">二、研究方法与思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-系统设计"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">(一)系统设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-机器小车"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">(二)机器小车</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-信号预处理"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">(三)信号预处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-信号识别"><span class="nav-number">1.3.4.4.</span> <span class="nav-text">(四)信号识别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、测试"><span class="nav-number">1.3.5.</span> <span class="nav-text">三、测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（一）OpenBCI眼电验证"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">（一）OpenBCI眼电验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（二）机器小车测试"><span class="nav-number">1.3.5.2.</span> <span class="nav-text">（二）机器小车测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（三）信号处理系统测试"><span class="nav-number">1.3.5.3.</span> <span class="nav-text">（三）信号处理系统测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（四）系统集成测试"><span class="nav-number">1.3.5.4.</span> <span class="nav-text">（四）系统集成测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、建议及总结"><span class="nav-number">1.3.6.</span> <span class="nav-text">四、建议及总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#改进方法，减少系统误差，减少控制时延。"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">改进方法，减少系统误差，减少控制时延。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开源硬件成本低廉，开发方便。"><span class="nav-number">1.3.6.2.</span> <span class="nav-text">开源硬件成本低廉，开发方便。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#该系统适用性强，经过适当改造可以控制其他设备。"><span class="nav-number">1.3.6.3.</span> <span class="nav-text">该系统适用性强，经过适当改造可以控制其他设备。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对于特定人群例如残疾人、聋哑人的应用前景更为广阔。"><span class="nav-number">1.3.6.4.</span> <span class="nav-text">对于特定人群例如残疾人、聋哑人的应用前景更为广阔。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续！不定期炸更。"><span class="nav-number">1.4.</span> <span class="nav-text">未完待续！不定期炸更。</span></a></li></ol></li></ol></div>
             
 
           </div>
