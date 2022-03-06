@@ -1,90 +1,32 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="OpenBCI," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="基于头部信号的小车运动控制实现前言此项目为本人18年的本科毕业设计，最近刚好开始写博客，所以就这个翻出来和大家分享一下。 废话不多说先看效果    前期准备硬件 OpenBCI相关设备  OpenBCI是个面向脑机接口EEG信号采集的开源硬件。OpenBCI Cyton是一个Arduino兼容的带有8通道神经接口和一个32位处理器开发板。       基于Arduino单片机的可编程小车   产品">
+    <meta name="description" content="基于头部信号的小车运动控制实现前言此项目为本人18年的本科毕业设计，最近刚好开始写博客，所以就这个翻出来和大家分享一下。 废话不多说先看效果    前期准备硬件 OpenBCI相关设备  OpenBCI是个面向脑机接口EEG信号采集的开源硬件。OpenBCI Cyton是一个Arduino兼容的带有8通道神经接口和一个32位处理器开发板。     基于Arduino单片机的可编程小车   产品所用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenBCI">
 <meta property="og:url" content="http://yoursite.com/2020/04/09/OpenBCI/index.html">
 <meta property="og:site_name" content="张欢的博客">
-<meta property="og:description" content="基于头部信号的小车运动控制实现前言此项目为本人18年的本科毕业设计，最近刚好开始写博客，所以就这个翻出来和大家分享一下。 废话不多说先看效果    前期准备硬件 OpenBCI相关设备  OpenBCI是个面向脑机接口EEG信号采集的开源硬件。OpenBCI Cyton是一个Arduino兼容的带有8通道神经接口和一个32位处理器开发板。       基于Arduino单片机的可编程小车   产品">
+<meta property="og:description" content="基于头部信号的小车运动控制实现前言此项目为本人18年的本科毕业设计，最近刚好开始写博客，所以就这个翻出来和大家分享一下。 废话不多说先看效果    前期准备硬件 OpenBCI相关设备  OpenBCI是个面向脑机接口EEG信号采集的开源硬件。OpenBCI Cyton是一个Arduino兼容的带有8通道神经接口和一个32位处理器开发板。     基于Arduino单片机的可编程小车   产品所用">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/openbci_board.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/usb_dongle.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenBCI/car.png">
@@ -115,228 +57,209 @@
 <meta name="twitter:image" content="http://yoursite.com/images/OpenBCI/openbci_board.png">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+<link rel="canonical" href="http://yoursite.com/2020/04/09/OpenBCI/">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/09/OpenBCI/"/>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://yoursite.com/2020/04/09/OpenBCI/","path":"2020/04/09/OpenBCI/","title":"OpenBCI"}</script>
 
-
-
-
-
-  <title>OpenBCI | 张欢的博客</title>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>OpenBCI | 张欢的博客</title>
   
 
 
 
 
+<link rel="dns-prefetch" href="https://blog-api-nomyf18m1-zhanghuan95.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?19758a4743d92fd67df11c8e23680ff0";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-
-
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-right page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">张欢的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">张欢的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
-  
-    <ul id="menu" class="menu">
-      
+
+
+
+
+
+</div>
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
 
-  
-</nav>
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%A4%B4%E9%83%A8%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%B0%8F%E8%BD%A6%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.</span> <span class="nav-text">基于头部信号的小车运动控制实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%9F%E8%AF%9D%E4%B8%8D%E5%A4%9A%E8%AF%B4%E5%85%88%E7%9C%8B%E6%95%88%E6%9E%9C"><span class="nav-number">1.2.</span> <span class="nav-text">废话不多说先看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="nav-number">1.3.</span> <span class="nav-text">前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">1.3.1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.3.2.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86"><span class="nav-number">1.3.3.</span> <span class="nav-text">理论知识</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95%E4%B8%8E%E6%80%9D%E8%B7%AF"><span class="nav-number">1.4.</span> <span class="nav-text">研究方法与思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.4.1.</span> <span class="nav-text">系统设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E5%B0%8F%E8%BD%A6"><span class="nav-number">1.4.2.</span> <span class="nav-text">机器小车</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E5%8F%B7%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">1.4.3.</span> <span class="nav-text">信号预处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E5%8F%B7%E8%AF%86%E5%88%AB"><span class="nav-number">1.4.4.</span> <span class="nav-text">信号识别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">1.5.</span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenBCI%E7%9C%BC%E7%94%B5%E9%AA%8C%E8%AF%81"><span class="nav-number">1.5.1.</span> <span class="nav-text">OpenBCI眼电验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E5%B0%8F%E8%BD%A6%E6%B5%8B%E8%AF%95"><span class="nav-number">1.5.2.</span> <span class="nav-text">机器小车测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95"><span class="nav-number">1.5.3.</span> <span class="nav-text">信号处理系统测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95"><span class="nav-number">1.5.4.</span> <span class="nav-text">系统集成测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E8%AE%AE%E5%8F%8A%E6%80%BB%E7%BB%93"><span class="nav-number">1.6.</span> <span class="nav-text">建议及总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9B%9E%E5%A4%8D"><span class="nav-number">1.7.</span> <span class="nav-text">问题回复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD%EF%BC%81%E4%B8%8D%E5%AE%9A%E6%9C%9F%E7%82%B8%E6%9B%B4%E3%80%82"><span class="nav-number">1.8.</span> <span class="nav-text">未完待续！不定期炸更。</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">张欢</p>
+  <div class="site-description" itemprop="description">不定期的在这里分享一下自己的一些想法。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
 
 
 
- </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
     
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
 
   
 
-  
+
+<div class="post-block">
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/09/OpenBCI/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="张欢">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/hope.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="张欢的博客">
+      <meta itemprop="description" content="不定期的在这里分享一下自己的一些想法。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="OpenBCI | 张欢的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OpenBCI
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-09 22:59:58" itemprop="dateCreated datePublished" datetime="2020-04-09T22:59:58+08:00">2020-04-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-06 21:42:26" itemprop="dateModified" datetime="2022-03-06T21:42:26+08:00">2022-03-06</time>
     </span>
 
+  
+  
+  <span class="post-meta-item">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">OpenBCI</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-09T22:59:58+08:00">
-                2020-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
-          
-
-          
-
-          
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2020/04/09/OpenBCI/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2020/04/09/OpenBCI/" data-xid="/2020/04/09/OpenBCI/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2020/04/09/OpenBCI/" class="post-meta-item leancloud_visitors" data-flag-title="OpenBCI" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+</div>
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
         <h1 id="基于头部信号的小车运动控制实现"><a href="#基于头部信号的小车运动控制实现" class="headerlink" title="基于头部信号的小车运动控制实现"></a>基于头部信号的小车运动控制实现</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此项目为本人18年的本科毕业设计，最近刚好开始写博客，所以就这个翻出来和大家分享一下。</p>
 <h2 id="废话不多说先看效果"><a href="#废话不多说先看效果" class="headerlink" title="废话不多说先看效果"></a>废话不多说先看效果</h2>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=412655697&bvid=BV1xV411o73Y&cid=177388746&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
@@ -350,14 +273,14 @@
 <img src="/images/OpenBCI/usb_dongle.png" alt="usb_dongle" style="zoom:50%;" />
 </blockquote>
 </li>
-</ol>
-<ol start="2">
 <li><p>基于Arduino单片机的可编程小车</p>
 <blockquote>
 <p><img src="/images/OpenBCI/car.png" alt="car"></p>
 <p>产品所用元器件： WIFI模块*1，arduino uno r3单片开发板*1，arduino 拓展版*1，直流减速电机*4，轮胎*4，电池盒*1，18650Li-ino电池*2,电压显示器*1，底盘*1。</p>
 </blockquote>
-<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3></li>
+</li>
+</ol>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><ol>
 <li><p>OpenBCI_GUI</p>
 </li>
 <li><p>OpenBCI_Python</p>
@@ -376,19 +299,19 @@
 <li><p>侵入式</p>
 <blockquote>
 <p>此类接口通常是将电极直接接入到大脑的灰质上,因为减少了传播介质的干扰,由此得到的神经信号质量较好。但是,由于植入电极须通过手术的方式,导致其本身会伴随较大风险。</p>
-<p><img src="/images/OpenBCI/device1.png" alt=""></p>
+<p><img src="/images/OpenBCI/device1.png"></p>
 </blockquote>
 </li>
 <li><p>半侵入式</p>
 <blockquote>
 <p>此类接口的位置一般是在大脑灰质之外，颅腔之内，虽然它的神经信号质量不如侵入式脑机接口，可是还是要比非侵入式要好。</p>
-<p><img src="/images/OpenBCI/device2.png" alt=""></p>
+<p><img src="/images/OpenBCI/device2.png"></p>
 </blockquote>
 </li>
 <li><p>非侵入式</p>
 <blockquote>
 <p>此类接口由于不需要植入大脑内部，所以不会对头部造成伤害，许多的此类设备直接与头部皮层相接，就像一顶帽子一样戴在头上既可。</p>
-<p><img src="/images/OpenBCI/device3.png" alt=""></p>
+<p><img src="/images/OpenBCI/device3.png"></p>
 </blockquote>
 </li>
 </ol>
@@ -410,7 +333,7 @@
 </li>
 <li><p>控制</p>
 <p>下位机接收上位机的控制指令后，对小车运动状态进行实时控制。</p>
-<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-27-25.png" alt=""></p>
+<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-27-25.png"></p>
 </li>
 </ol>
 <h3 id="机器小车"><a href="#机器小车" class="headerlink" title="机器小车"></a>机器小车</h3><ol>
@@ -420,41 +343,39 @@
 <li><p>启动</p>
 <p>通过串口读取来自上位机的控制指令，并且将第一个左转信号视为启动信号。</p>
 </li>
-</ol>
-<ol start="3">
 <li><p>行进</p>
 <p>启动后，小车向前行进，并且实时检测串口信号。</p>
 </li>
 <li><p>控制</p>
 <p>根据控制命令，控制小车左转或右转后，继续行进。</p>
-<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-27-56.png" alt=""></p>
-<h3 id="信号预处理"><a href="#信号预处理" class="headerlink" title="信号预处理"></a>信号预处理</h3></li>
+<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-27-56.png"></p>
+</li>
+</ol>
+<h3 id="信号预处理"><a href="#信号预处理" class="headerlink" title="信号预处理"></a>信号预处理</h3><ol>
 <li><p>时间片数据</p>
 <p>将每秒钟的250个数据封装成一段。</p>
 </li>
 <li><p>去基线漂移</p>
 <p>数字信号中会含有基线干扰信号（低频噪音），会对信号分析产生不利影响。需要通过预处理消除信号基线</p>
 </li>
-</ol>
-<ol start="3">
 <li><p>陷波滤波</p>
 <p>在我国采用的是50 Hz频率的交流电，所以在平时需要对信号进行采集处理和分析时，常会存在50 Hz的工频干扰。</p>
 </li>
 <li><p>带通滤波</p>
 <p>经过多次试验发现，选取在7-13Hz范围的波形信号最为明显。</p>
-<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-28-04.png" alt=""></p>
+<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-28-04.png"></p>
 </li>
 </ol>
 <h3 id="信号识别"><a href="#信号识别" class="headerlink" title="信号识别"></a>信号识别</h3><ol>
 <li>保持睁眼时</li>
 </ol>
-<p><img src="/images/OpenBCI/figure1.png" alt=""></p>
+<p><img src="/images/OpenBCI/figure1.png"></p>
 <ol start="2">
 <li><p>单次眨眼</p>
-<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-33-49.png" alt=""></p>
+<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-33-49.png"></p>
 </li>
 <li><p>两次眨眼</p>
-<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-33-56.png" alt=""></p>
+<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-33-56.png"></p>
 </li>
 </ol>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="OpenBCI眼电验证"><a href="#OpenBCI眼电验证" class="headerlink" title="OpenBCI眼电验证"></a>OpenBCI眼电验证</h3><ol>
@@ -467,22 +388,23 @@
 <li><p>保持皮肤干爽（建议粘贴脑电极前使用洁面膏等清洗脸部，并擦干保持干燥）</p>
 </li>
 <li><p>使用黏性较强的胶带粘贴，如下图所示</p>
-<p><img src="/images/OpenBCI/figure2.png" alt=""></p>
-</li>
-<li><p>通过对比(a)(b)(c)(d)可知，带通滤波器的选择在7-13Hz时，波形最为容易分析，所以在信号处理系统设计中，带通滤波器的频带剪切频率f1选择为7Hz和剪切频率f2选择为13Hz。</p>
-<p><img src="/images/OpenBCI/Snipaste_2020-04-19_20-14-31.png" alt=""></p>
 </li>
 </ol>
+<p>  <img src="/images/OpenBCI/figure2.png"></p>
+<ol start="6">
+<li>通过对比(a)(b)(c)(d)可知，带通滤波器的选择在7-13Hz时，波形最为容易分析，所以在信号处理系统设计中，带通滤波器的频带剪切频率f1选择为7Hz和剪切频率f2选择为13Hz。</li>
+</ol>
+<p>  <img src="/images/OpenBCI/Snipaste_2020-04-19_20-14-31.png"></p>
 <h3 id="机器小车测试"><a href="#机器小车测试" class="headerlink" title="机器小车测试"></a>机器小车测试</h3><p>将小车运行测试代码烧写入小车中如下图所示，</p>
-<p><img src="/images/OpenBCI/programming.png" alt=""></p>
+<p><img src="/images/OpenBCI/programming.png"></p>
 <p>当小车从串口接收到第一个左转指令时，将其视为启动命令，控制小车前进，其后不断从串口缓冲区读取命令，当读取到字符l时控制小车左转，并输出left，当读取到字符r时控制小车右转，并输出right。测试结果如下图所示。</p>
-<p><img src="/images/OpenBCI/testingCmd1.png" alt=""></p>
-<p><img src="/images/OpenBCI/testingCmd2.png" alt=""></p>
-<h3 id="信号处理系统测试"><a href="#信号处理系统测试" class="headerlink" title="信号处理系统测试"></a>信号处理系统测试</h3><p><img src="/images/OpenBCI/sysRunning.png" alt=""></p>
+<p><img src="/images/OpenBCI/testingCmd1.png"></p>
+<p><img src="/images/OpenBCI/testingCmd2.png"></p>
+<h3 id="信号处理系统测试"><a href="#信号处理系统测试" class="headerlink" title="信号处理系统测试"></a>信号处理系统测试</h3><p><img src="/images/OpenBCI/sysRunning.png"></p>
 <p>信号处理系统运行如上图所示，首先各设备之间建立连接，然后读取EEG数据，先对其进行信号预处理，再进行信号识别。测试结果如下图所示，设备连接正常，数据传输正常，信号处理系统运行正常。</p>
-<p><img src="/images/OpenBCI/output.png" alt=""></p>
-<h3 id="系统集成测试"><a href="#系统集成测试" class="headerlink" title="系统集成测试"></a>系统集成测试</h3><p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-39-27.png" alt=""></p>
-<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-39-36.png" alt=""></p>
+<p><img src="/images/OpenBCI/output.png"></p>
+<h3 id="系统集成测试"><a href="#系统集成测试" class="headerlink" title="系统集成测试"></a>系统集成测试</h3><p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-39-27.png"></p>
+<p><img src="/images/OpenBCI/Snipaste_2020-04-12_18-39-36.png"></p>
 <h2 id="建议及总结"><a href="#建议及总结" class="headerlink" title="建议及总结"></a>建议及总结</h2><ol>
 <li>改进方法，减少系统误差，减少控制时延。</li>
 <li>开源硬件成本低廉，开发方便。</li>
@@ -490,414 +412,88 @@
 <li>对于特定人群例如残疾人、聋哑人的应用前景更为广阔。</li>
 </ol>
 <h2 id="问题回复"><a href="#问题回复" class="headerlink" title="问题回复"></a>问题回复</h2><ol>
-<li>求代码？<br>a. 本文只做技术探讨，不涉及代码。设备连接、控制等请参考官方文档，github上有官方OpenBCI_Python。滤波可以用Python  signal库。</li>
-<li>关于眨眼信号的识别问题，这里提出几条想法，仅供参考。<br>a. 最简单的，判断一个数据包里面包含的上升波形。<br>b. 用傅里叶变换把时域信号转为频域信号。判断是否包含某些频率。<br>c. 提取n组眨眼信号数据，作为矩阵数据。计算其特征值范围用于判断。<br>d. 提取n组眨眼信号数据，训练卷积神经网络模型，用于判断数据。</li>
-<li>非常影响效果的噪声问题。<br>a. 除了贴好位置，还有最好使用电池供电保证供电稳定。避免交流电干扰，GUI里面有个Notch设置为50Hz，国内的交流电为50Hz。一定要找一个空旷的地方做实验，室内的话各种用电设备都有可能会造成干扰。<br>b. 官方文档：<a href="https://docs.openbci.com/docs/10Troubleshooting/minimizingNoise#get-rid-of-ac-noise" target="_blank" rel="noopener">https://docs.openbci.com/docs/10Troubleshooting/minimizingNoise#get-rid-of-ac-noise</a></li>
+<li>求代码？<br>  a. 本文只做技术探讨，不涉及代码。设备连接、控制等请参考官方文档，github上有官方OpenBCI_Python。滤波可以用Python  signal库。</li>
+<li>关于眨眼信号的识别问题，这里提出几条想法，仅供参考。<br>  a. 最简单的，判断一个数据包里面包含的上升波形。<br>  b. 用傅里叶变换把时域信号转为频域信号。判断是否包含某些频率。<br>  c. 提取n组眨眼信号数据，作为矩阵数据。计算其特征值范围用于判断。<br>  d. 提取n组眨眼信号数据，训练卷积神经网络模型，用于判断数据。</li>
+<li>非常影响效果的噪声问题。<br>  a. 除了贴好位置，还有最好使用电池供电保证供电稳定。避免交流电干扰，GUI里面有个Notch设置为50Hz，国内的交流电为50Hz。一定要找一个空旷的地方做实验，室内的话各种用电设备都有可能会造成干扰。<br>  b. 官方文档：<a target="_blank" rel="noopener" href="https://docs.openbci.com/docs/10Troubleshooting/minimizingNoise#get-rid-of-ac-noise">https://docs.openbci.com/docs/10Troubleshooting/minimizingNoise#get-rid-of-ac-noise</a></li>
 </ol>
 <h2 id="未完待续！不定期炸更。"><a href="#未完待续！不定期炸更。" class="headerlink" title="未完待续！不定期炸更。"></a>未完待续！不定期炸更。</h2>
-      
     </div>
-    
-    
-    
 
     
-
     
-
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/OpenBCI/" rel="tag"># OpenBCI</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
+          <div class="post-tags">
+              <a href="/tags/OpenBCI/" rel="tag"># OpenBCI</a>
           </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/09/LPR/" rel="prev" title="LPR">
-                LPR <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
 
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/hope.jpg"
-                alt="张欢" />
-            
-              <p class="site-author-name" itemprop="name">张欢</p>
-              <p class="site-description motion-element" itemprop="description">不定期的在这里分享一下自己的一些想法。</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-                <a href="/archives">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/zhanghuan95" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
+          <div class="post-nav">
+            <div class="post-nav-item">
             </div>
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于头部信号的小车运动控制实现"><span class="nav-number">1.</span> <span class="nav-text">基于头部信号的小车运动控制实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#废话不多说先看效果"><span class="nav-number">1.2.</span> <span class="nav-text">废话不多说先看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">1.3.</span> <span class="nav-text">前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.3.1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">1.3.2.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理论知识"><span class="nav-number">1.3.3.</span> <span class="nav-text">理论知识</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#研究方法与思路"><span class="nav-number">1.4.</span> <span class="nav-text">研究方法与思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统设计"><span class="nav-number">1.4.1.</span> <span class="nav-text">系统设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器小车"><span class="nav-number">1.4.2.</span> <span class="nav-text">机器小车</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信号预处理"><span class="nav-number">1.4.3.</span> <span class="nav-text">信号预处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信号识别"><span class="nav-number">1.4.4.</span> <span class="nav-text">信号识别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">1.5.</span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenBCI眼电验证"><span class="nav-number">1.5.1.</span> <span class="nav-text">OpenBCI眼电验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器小车测试"><span class="nav-number">1.5.2.</span> <span class="nav-text">机器小车测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信号处理系统测试"><span class="nav-number">1.5.3.</span> <span class="nav-text">信号处理系统测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统集成测试"><span class="nav-number">1.5.4.</span> <span class="nav-text">系统集成测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建议及总结"><span class="nav-number">1.6.</span> <span class="nav-text">建议及总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题回复"><span class="nav-number">1.7.</span> <span class="nav-text">问题回复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续！不定期炸更。"><span class="nav-number">1.8.</span> <span class="nav-text">未完待续！不定期炸更。</span></a></li></ol></li></ol></div>
-            
-
+            <div class="post-nav-item">
+                <a href="/2020/04/09/LPR/" rel="next" title="LPR">
+                  LPR <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
+    </footer>
+  </article>
+</div>
 
 
-        
-      </div>
-    </main>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2020 &mdash; <span itemprop="copyrightYear">2022</span>
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">张欢</span>
-
-  
 </div>
-
-
-
-
-
-
-
-
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
 
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://blog-api-nomyf18m1-zhanghuan95.vercel.app","placeholder":"Just go","avatar":"mm","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"requiredMeta":[],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2020/04/09/OpenBCI/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
 </script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
 </body>
 </html>
