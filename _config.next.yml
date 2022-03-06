@@ -37,12 +37,12 @@ custom_file_path:
 
 # Schemes
 # scheme: Muse
-scheme: Mist
-#scheme: Pisces
-#scheme: Gemini
+# scheme: Mist
+scheme: Pisces
+# scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 
 # ---------------------------------------------------------------
@@ -718,7 +718,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -909,7 +909,7 @@ waline:
   meta: [nick, mail, link]                                  # Custom comment header
   pageSize: 10                                              # Pagination size
   lang: zh-cn                                               # Language, available values: en, zh-cn
-  visitor: true                                            # Article reading statistic
+  visitor: false                                            # Article reading statistic
   comment_count: true                                       # If false, comment count will only be displayed in post page, not in home page
   requiredMeta: []                                          # Set required fields: [nick] | [nick, mail]
   libUrl:                                                   # Set custom library cdn url
